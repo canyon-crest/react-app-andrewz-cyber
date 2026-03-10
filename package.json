@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/canyon-crest/react-app-andrewz-cyber.git",
+  "homepage": "https://canyon-crest.github.io/react-app-andrewz-cyber",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
