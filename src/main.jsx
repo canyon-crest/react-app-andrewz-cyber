@@ -9,9 +9,6 @@ import Card from './Card.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Nav />
-    <Card Name="Andrew" description="Person" />
-    <Card Name="Jonathan" description="In Front of Person" />
-    <Card Name="Advaith" description="Diagonal of Person" />
     <App />
     <Foot />
   </StrictMode>,
