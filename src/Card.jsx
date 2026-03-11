@@ -1,7 +1,7 @@
 import './Card.css'
 import {useState} from 'react'
 
-function Card({Name,description,onAddToCart}){
+function Card({Name,description,onAddToCart, position}){
 
     const [count,setCount] = useState(0)
 
@@ -11,7 +11,7 @@ function Card({Name,description,onAddToCart}){
     }
 
     return (
-        <div className='Card'>
+        <div className="Card">
             <h2>{Name}</h2>
             <p>Description: {description}</p>
             <button onClick = {inc}>Add {Name} to cart</button>
