@@ -1,11 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Card from './Card';
+import Card from './Card.jsx';
+import Nav from './Nav.jsx';
+import About from './About.jsx';
+import Contact from './Contact.jsx';
 import './App.css';
 
 function App() {
   const [cartTotal, setCartTotal] = useState(0)
+  const [page, setPage] = useState("home");
 
   const incCartTotal = () => {
     setCartTotal(prevTotal => prevTotal + 1);
@@ -13,35 +15,23 @@ function App() {
 
   return(
     <>
-       {/* <div>
-         <a href="https://vite.dev" target="_blank">
-           <img src={viteLogo} className="logo" alt="Vite logo" />
-         </a>
-         <a href="https://react.dev" target="_blank">
-           <img src={reactLogo} className="logo react" alt="React logo" />
-         </a>
-       </div>
-       <h1>Vite + React</h1>
-       <div className="card">
-         <button onClick={() => setCount((count) => count + 6767676767)}>
-           count is {count}
-         </button>
-         <p>
-           Edit <code>src/App.jsx</code> and save to test HMR
-         </p>
-       </div>
-       <p className="read-the-docs">
-         Click on the Vite and React logos to learn more
-       </p> */}
+        <Nav setPage = {setPage} />
+        {page == "home" && <App/>}
+        {page == "about" && <About/>}
+        {page == "contact" && <Contact/>}
         <br></br>
         <h1>Apples</h1>
         <p>Apples are very tasty and healthy. Please buy and eat a lot of apples.</p>
+        <h1>Shopping Cart Total: {cartTotal}</h1>
         <div className="ShoppingCart">
-          <h1>Shopping Cart Total: {cartTotal}</h1>
-          <Card Name="Honeycrisp Apples" description="Exceptionally crisp and juicy, perfect for fresh eating and salads." onAddToCart = {incCartTotal} />
-          <Card Name="Fuji Apples" description="Very sweet and firm, excellent for snacking, baking, and sauces." onAddToCart = {incCartTotal} />
-          <Card Name="Granny Smith Apples" description="Bright green and tart, ideal for pies, baking, and snacking." onAddToCart = {incCartTotal} />
+        <Card Name="Honeycrisp Apples" description="Exceptionally crisp and juicy, perfect for fresh eating and salads."  onAddToCart = {incCartTotal} />
+        <Card Name="Fuji Apples" description="Very sweet and firm, excellent for snacking, baking, and sauces."  onAddToCart = {incCartTotal} />
+        <Card Name="Granny Smith Apples" description="Bright green and tart, ideal for pies, baking, and snacking." onAddToCart = {incCartTotal} />
+        <Card Name="Gala Apples" description="A sweet, crisp, and aromatic apple, perfect for eating raw and in salads." onAddToCart = {incCartTotal} />
+        <Card Name="Red Delicious Apples" description="A classic, mild-sweet, and crisp red apple." onAddToCart = {incCartTotal} />
+        <Card Name="Cosmic Crisp Apples" description="A firm, sweet, and crisp variety, designed to be a long-lasting, versatile apple." onAddToCart = {incCartTotal} />
         </div>
+        <br></br><br></br><br></br><br></br>
     </>
   )
 }
