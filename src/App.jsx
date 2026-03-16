@@ -1,8 +1,5 @@
 import { useState } from 'react'
-import Card from './Card.jsx';
-import Nav from './Nav.jsx';
-import About from './About.jsx';
-import Contact from './Contact.jsx';
+import Card from './Card';
 import './App.css';
 
 function App() {
@@ -31,7 +28,6 @@ function App() {
         <Card Name="Red Delicious Apples" description="A classic, mild-sweet, and crisp red apple." onAddToCart = {incCartTotal} />
         <Card Name="Cosmic Crisp Apples" description="A firm, sweet, and crisp variety, designed to be a long-lasting, versatile apple." onAddToCart = {incCartTotal} />
         </div>
-        <br></br><br></br><br></br><br></br>
     </>
   )
 }

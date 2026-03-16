@@ -4,7 +4,6 @@ import './index.css'
 import App from './App.jsx'
 import Nav from './Nav.jsx'
 import Foot from './Foot.jsx'
-import Card from './Card.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

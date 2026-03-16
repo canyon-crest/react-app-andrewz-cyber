@@ -11,7 +11,7 @@ function Card({Name,description,onAddToCart, position}){
     }
 
     return (
-        <div className="Card">            
+        <div className="Card">
             <h2>{Name}</h2>
             <p>Description: {description}</p>
             <button onClick = {inc}>Add {Name} to cart</button>
