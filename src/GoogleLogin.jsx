@@ -90,7 +90,7 @@ function GoogleLogin() {
       ) : (
         // If no user is logged in, show login button
         <div>
-          <p>Please log in with Google to continue.</p>
+          <p><h2>Please log in to see the shop and leave feedback.</h2></p>
           <button onClick={handleLogin}>Login with Google</button>
         </div>
       )}
